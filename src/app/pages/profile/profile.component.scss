@@ -1,0 +1,61 @@
+.object-cover{
+    width: calc(100vw - 277px) !important;
+    height: 130px;
+    left: 10px;
+    top: 129px;
+    position: fixed;
+    z-index: 10;   
+    object-fit: cover;
+}
+.avatar-profile{
+    position: fixed;
+    top: 200px;
+    left: 50px;
+    z-index: 10;
+}
+.avatar-logo{
+    position: fixed;
+    top: 195px;
+    right: 330px;
+    width: 125px;
+    height: 125px;
+    z-index: 10;
+}
+.avatar-name{
+    position: fixed;
+    top: 270px;
+    left: 160px;
+    z-index: 10;
+}
+
+
+
+.object-cover-small{
+    width: calc(100vw - 20px) !important;
+    height: 130px;
+    left: 10px;
+    top: 129px;
+    position: fixed;
+    z-index: 10;   
+    object-fit: cover;
+}
+.avatar-profile-small{
+    position: fixed;
+    top: 200px;
+    left: 50px;
+    z-index: 10;
+}
+.avatar-logo-small{
+    position: fixed;
+    top: 195px;
+    right: 330px;
+    width: 125px;
+    height: 125px;
+    z-index: 10;
+}
+.avatar-name-small{
+    position: fixed;
+    top: 270px;
+    left: 160px;
+    z-index: 10;
+}

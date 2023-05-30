@@ -3,7 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "outDir": "./public/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
@@ -19,12 +19,24 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "rxjs": [
+        "node_modules/rxjs"
+      ],
+      "rxjs/*": [
+        "node_modules/rxjs/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
+    "skipLibCheck": true,
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,

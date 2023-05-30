@@ -1,0 +1,56 @@
+<span fxLayout="column">
+  <ng-container *ngIf="advertItems.length > 0">
+
+    <!-- <mat-card *ngIf="advertItems.length === 0" fxFlex fxLayout="column" class="advert"> -->
+    <mat-card fxLayout="column" class="advert">
+      <div fxFlex fxLayout="column" [fxLayout.gt-sm]="side == true ? 'column' : 'row'" fxLayoutAlign="center center">
+        <img fxFlex class="advert-image" fxLayoutAlign="center center" src="assets/images/no-image.png">
+        <div fxFlex="auto" fxLayout="column" fxLayoutAlign="center stretch">
+          <div class="mat-card-title" fxLayout="row" fxLayoutAlign="space-between center">Loadgistix
+            <button mat-button [matMenuTriggerFor]="menu" class="contact-details-button">
+              <span class="contact-details-label"><i>contact details</i></span>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item><mat-icon>phone</mat-icon>&nbsp;064 506 5810</button>
+              <button mat-menu-item><mat-icon>mail</mat-icon>&nbsp;info@loadgistix.com</button>
+              <button mat-menu-item><mat-icon>web</mat-icon>&nbsp;www.loadgistix.com</button>
+              <button mat-menu-item><mat-icon>address</mat-icon>&nbsp;75 Hart Avenue, Meyersdal, Alberton</button>
+            </mat-menu>
+          </div>
+          <div class="mat-card-subtitle" class="mat-card-subtitle">Get more</div>
+          <p class="mat-card-content">
+            Contact us today - we will show you how to get the best out of Loadgistix!
+          </p>
+        </div>
+      </div>
+    </mat-card>
+
+    <mat-card *ngFor="let advertItem of advertItems" fxFlex fxLayout="column" class="advert">
+      <div fxFlex fxLayout="column" [fxLayout.gt-sm]="side == true ? 'column' : 'row'" fxLayoutAlign="center stretch">
+        <button mat-button [matMenuTriggerFor]="menu" class="contact-details-button">
+          <span class="contact-details-label"><i>contact details</i></span>
+        </button>
+        <mat-menu #menu="matMenu" xPosition="before">
+          <button mat-menu-item><mat-icon>phone</mat-icon>&nbsp;064 506 5810</button>
+          <button mat-menu-item><mat-icon>mail</mat-icon>&nbsp;info@loadgistix.com</button>
+          <button mat-menu-item
+            (click)="navigateExternal($event, advertItem.link!.substring(0,4)=='http'?advertItem.link!:'https://'+advertItem.link)">{{advertItem.link}}><mat-icon>web</mat-icon>&nbsp;www.loadgistix.com</button>
+          <button mat-menu-item><mat-icon>address</mat-icon>&nbsp;75 Hart Avenue, Meyersdal, Alberton</button>
+        </mat-menu>
+        <div *ngIf="advertItem.avatar" class="advert-image-container" fxFlex fxLayout="column"
+          fxLayoutAlign="center center">
+          <img class="advert-image"
+            [src]="'imagesFolder' + 'Adverts/' + advertItem.id + advertItem.avatar + '?t=' + timestamp">
+        </div>
+        <div fxFlex="auto" fxLayout="column" fxLayoutAlign="center stretch">
+          <div class="mat-card-title">{{advertItem.title}}</div>
+          <div class="mat-card-subtitle" class="mat-card-subtitle">{{advertItem.subTitle}}</div>
+          <p class="mat-card-content">
+            {{advertItem.content}}
+          </p>
+        </div>
+      </div>
+    </mat-card>
+
+  </ng-container>
+</span>

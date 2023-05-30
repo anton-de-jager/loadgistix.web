@@ -1,0 +1,25 @@
+<div [ngClass]="placement=='bottom'?'middle middle-bottom middle-small':'middle middle-top middle-small'" [ngClass.gt-sm]="placement=='bottom'?'middle middle-bottom middle-large':'middle middle-top middle-large'" fxFlex="auto" fxLayout="row"
+    fxFlexAlign="space-between stretch" fxLayoutGap="4px">
+    <div *ngFor="let item of items; let first = first; let last = last" fxFlex="auto" fxLayout="center center">
+        <label fxLayout="center center" fxFlex="auto" fxLayout="column">
+            <input type="radio" name="radio" [checked]="value==item.value" fxFlex="auto" (change)="selectionChanged(item.value, item.label)" />
+            <div [class]="placement==='bottom'?'front-end box box-3d box-small':'front-end box box-small'" [ngClass.gt-sm]="placement=='bottom'?'front-end box box-3d box-large':'front-end box box-large'" fxFlex="auto">
+                <span>
+                    <mat-icon class="button-row-icon material-icons.md-36">{{item.icon}}</mat-icon>
+                    <span *ngIf="item.label!==''">{{item.label}}</span>
+                </span>
+            </div>
+        </label>
+    </div>
+    <!-- <ng-container *ngFor="let item of items; let first = first; let last = last">
+        <label fxLayout="center center">
+            <input type="radio" name="radio" [checked]="value==item.value" />
+            <div class="front-end box box-small" [ngClass.gt-sm]="'front-end box box-large'">
+                <span>
+                    <mat-icon class="button-row-icon material-icons.md-48">{{item.icon}}</mat-icon>
+                    <span *ngIf="item.label!==''">{{item.label}}</span>
+                </span>
+            </div>
+        </label>
+    </ng-container> -->
+</div>

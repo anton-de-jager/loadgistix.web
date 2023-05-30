@@ -1,1 +1,178 @@
-/* You can add global styles to this file, and also import other style files */
+
+// // Custom Theming for Angular Material
+// // For more information: https://material.angular.io/guide/theming
+// @use '@angular/material' as mat;
+// // Plus imports for other components in your app.
+
+// // Include the common styles for Angular Material. We include this here so that you only
+// // have to load a single css file for Angular Material in your app.
+// // Be sure that you only ever include this mixin once!
+// @include mat.core();
+
+// $loadgistix-primary-palette: (
+//   50 : #ecf6fb,
+//   100 : #cee8f5,
+//   200 : #aed8ef,
+//   300 : #8ec8e8,
+//   400 : #75bde3,
+//   500 : #5db1de,
+//   600 : #55aada,
+//   700 : #4ba1d5,
+//   800 : #4198d1,
+//   900 : #3088c8,
+//   A100 : #ffffff,
+//   A200 : #daeeff,
+//   A400 : #a7d8ff,
+//   A700 : #8dccff,
+//   contrast: (50: rgba(black, 0.87),
+//     100: rgba(black, 0.87),
+//     200: rgba(black, 0.87),
+//     300: rgba(black, 0.87),
+//     400: rgba(black, 0.87),
+//     500: white,
+//     600: white,
+//     700: white,
+//     800: white,
+//     900: white,
+//     A100: rgba(black, 0.87),
+//     A200: rgba(black, 0.87),
+//     A400: rgba(black, 0.87),
+//     A700: white,
+//   )
+// );
+
+// $loadgistix-accent-palette: (
+//   50 : #e4e5e7,
+//   100 : #bcbfc4,
+//   200 : #8f949d,
+//   300 : #626976,
+//   400 : #404958,
+//   500 : #1e293b,
+//   600 : #1a2435,
+//   700 : #161f2d,
+//   800 : #121926,
+//   900 : #0a0f19,
+//   A100 : #5a8cff,
+//   A200 : #2768ff,
+//   A400 : #0049f3,
+//   A700 : #0041da,
+//   contrast: (
+//     50: rgba(black, 0.87),
+//     100: rgba(black, 0.87),
+//     200: rgba(black, 0.87),
+//     300: rgba(black, 0.87),
+//     400: rgba(black, 0.87),
+//     500: white,
+//     600: white,
+//     700: white,
+//     800: white,
+//     900: white,
+//     A100: rgba(black, 0.87),
+//     A200: rgba(black, 0.87),
+//     A400: rgba(black, 0.87),
+//     A700: white,
+//   )
+// );
+
+// $loadgistix-warn-palette: (
+//   50 : #fbeded,
+//   100 : #f6d1d1,
+//   200 : #f0b3b3,
+//   300 : #e99494,
+//   400 : #e57d7d,
+//   500 : #e06666,
+//   600 : #dc5e5e,
+//   700 : #d85353,
+//   800 : #d34949,
+//   900 : #cb3838,
+//   A100 : #ffffff,
+//   A200 : #ffe2e2,
+//   A400 : #ffafaf,
+//   A700 : #ff9696,
+//   contrast: (
+//     50: rgba(black, 0.87),
+//     100: rgba(black, 0.87),
+//     200: rgba(black, 0.87),
+//     300: rgba(black, 0.87),
+//     400: rgba(black, 0.87),
+//     500: white,
+//     600: white,
+//     700: white,
+//     800: white,
+//     900: white,
+//     A100: rgba(black, 0.87),
+//     A200: rgba(black, 0.87),
+//     A400: rgba(black, 0.87),
+//     A700: white,
+//   )
+// );
+// // Define the palettes for your theme using the Material Design palettes available in palette.scss
+// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// // hue. Available color palettes: https://material.io/design/color/
+// $loadgistix-primary: mat.define-palette($loadgistix-primary-palette);
+// $loadgistix-accent: mat.define-palette($loadgistix-accent-palette, A200, A100, A400);
+// $loadgistix-warn: mat.define-palette($loadgistix-ward-palette);
+
+// // Create the theme object. A theme consists of configurations for individual
+// // theming systems such as "color" or "typography".
+// //$loadgistix-theme: mat-light-theme($loadgistix-primary-palette, $loadgistix-accent-palette, $loadgistix-warn-palette);
+// $loadgistix-theme: mat.define-light-theme((
+//   color: (
+//     primary: $loadgistix-primary,
+//     accent: $loadgistix-accent,
+//     warn: $loadgistix-warn,
+//   )
+// ));
+
+
+// // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// // that you are using.
+// // @include angular-material-theme($loadgistix-theme);
+// //@include mat.all-component-themes($loadgistix-theme);
+// @include angular-material-theme($loadgistix-theme);
+// // @include mat.angular-material-theme($loadgistix-theme);
+
+// /* You can add global styles to this file, and also import other style files */
+
+
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$loadgistix-primary: mat.define-palette(mat.$indigo-palette);
+$loadgistix-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// $loadgistix-primary: $loadgistix-primary-palette;//mat.define-palette(mat.$indigo-palette);
+// $loadgistix-accent:$loadgistix-accent-palette;// mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$loadgistix-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$loadgistix-theme: mat.define-light-theme((
+  color: (
+    primary: $loadgistix-primary,
+    accent: $loadgistix-accent,
+    warn: $loadgistix-warn,
+      )
+      ));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($loadgistix-theme);
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

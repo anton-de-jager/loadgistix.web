@@ -1,0 +1,43 @@
+import { bid } from "./bid.model";
+
+export class load {
+    id?: string;
+    userId?: string;
+    userDescription?: string;
+    loadCategoryId?: string;
+    loadCategoryDescription?: string;
+    loadTypeId?: string;
+    loadTypeDescription?: string;
+    loadTypeLiquid?: boolean;
+    description?: string;
+    note?: string;
+    price?: number;
+    originatingAddressLabel?: string;
+    originatingAddressLat?: number;
+    originatingAddressLon?: number;
+    destinationAddressLabel?: string;
+    destinationAddressLat?: number;
+    destinationAddressLon?: number;
+    itemCount?: number;
+    weight?: number;
+    length?: number;
+    width?: number;
+    height?: number;
+    volume?: number;
+    totalValue?: number;
+    dateOut?: Date;
+    dateIn?: Date;
+    dateBidEnd?: Date;
+    avatar?: string;
+    statusId?: string;
+    statusDescription?: string;
+    review?: number;
+    reviewCount?: number;
+    bidCount?: number;
+    userIdAccepted?: string;
+    userIdLoaded?: string;
+    userIdLoadedConfirmed?: string;
+    userIdDelivered?: string;
+    userIdDeliveredConfirmed?: string;
+    bid?: bid[];
+}

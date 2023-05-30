@@ -1,0 +1,55 @@
+.contact-details-button {
+    position: absolute;
+    bottom: 0;
+    right: 12px;
+ }
+
+ .contact-details-label{
+    color: #FFF;
+ }
+
+ .mat-card-content{
+    padding-bottom: 4px;
+ }
+
+ .advert-image-container {
+     border-radius: 12px 12px 0px 0px !important;
+     //margin-bottom: 0;
+    //  width:100%!important;
+    //  height: 150px!important;
+     //margin: 0 0 auto!important;
+ }
+
+ .advert-image {
+     border-radius: 12px 12px 0px 0px !important;
+     //margin-bottom: 0;
+     width:234px!important;
+     height: 175.5px!important;
+     //margin: 0 0 auto!important;
+ }
+
+.advert {
+    box-shadow: inset 0 0 5px #1E293B;
+    border-radius: 12px;    
+    padding: 8px!important;
+    //margin-bottom: 8px;
+    background-color:#BDBFC2;
+}
+
+.advert-top {
+    box-shadow: inset 0 0 5px 0px #1E293B;
+    border-radius: 12px;    
+    padding: 8px!important;
+    //margin-bottom: 8px;
+    background-color:#BDBFC2;
+}
+
+.mat-card-title{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.mat-card-subtitle{
+    font-style: italic;
+    color: rgb(51, 51, 51);
+}

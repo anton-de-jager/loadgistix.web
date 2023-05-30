@@ -1,0 +1,25 @@
+<div fxFlex fxLayout="column" fxFlexAlign="center center">
+  <div class="box-dark dialog-header" fxFlex fxLayout="column" fxFlexAlign="center center">
+    <img class="sidebar-image-logo rotate" fxFlexOffset="8px" src="../assets/images/logo/iconWhite.png">
+    <img class="sidebar-image-name" src="../assets/images/logo/nameWhite.png">
+    <button mat-flat-button class="dialog-button-close" type="button" (click)="cancel()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div fxFlex mat-dialog-content class="box-light dialog-content">
+    <div fxFlex fxLayoutAlign="start center" fxLayout="column">
+      <ngx-auth-firebaseui appearance="outline" [resetPasswordEnabled]="true"
+        [guestEnabled]="false"></ngx-auth-firebaseui>
+      <!-- <ngx-auth-firebaseui appearance="outline" [resetPasswordEnabled]="true" [guestEnabled]="false" tosUrl="/legal/tos"
+        privacyPolicyUrl="/legal/privacy" messageOnAuthSuccess="Here we go! The authentication was successful! "
+        messageOnAuthError="Oop! Something went wrong! Please retry again!" (onSuccess)="saveUser($event)"
+        (onError)="handleError($event)" [min]="8" [max]="15" [enableLengthRule]="true" [enableLowerCaseLetterRule]="true"
+        [enableUpperCaseLetterRule]="true" [enableDigitRule]="true" [enableSpecialCharRule]="true"
+        (onStrengthChanged)="onStrengthChanged($event)" [providers]="[ providers.Facebook, providers.Twitter]">
+      </ngx-auth-firebaseui> -->
+    </div>
+  </div>
+  <div mat-dialog-actions class="box-light dialog-footer" fxFlex="50px" fxLayout="row" fxLayoutAlign="end center">
+    <button mat-raised-button color="warn" (click)="cancel()">Cancel</button>
+  </div>
+</div>
